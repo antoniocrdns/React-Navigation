@@ -19,11 +19,11 @@ const HomeStackNavigator = createNativeStackNavigator();
 function MyStack() {
     return (
         <HomeStackNavigator.Navigator
-            initialRouteName="FeedScreen"
+            initialRouteName="CalculatorScreen"
         >
             <HomeStackNavigator.Screen
-                name="FeedScreen"
-                component={FeedScreen}
+                name="CalculatorScreen"
+                component={CalculatorScreen}
             />
             {/* <HomeStackNavigator.Screen
                 name="Stack"
@@ -41,7 +41,7 @@ const Tab = createBottomTabNavigator();
 function MyTabs() {
     return (
         <Tab.Navigator
-            initialRouteName="Feed"
+            initialRouteName="CalculatorScreen"
             screenOptions={{
                 tabBarActiveTintColor: "cyan",
             }}
@@ -70,23 +70,23 @@ function MyTabs() {
                 }}  
             /> */}
             <Tab.Screen 
-                name="Feed" 
-                component={FeedScreen}
-                options={{
-                    tabBarLabel: 'Feed',
-                    tabBarIcon: ({ color, size }) => (
-                        <MaterialIcons name="feed" size={size} color={color} />
-                    ),
-                    headerShown: true,
-                }}  
-            />
-            <Tab.Screen 
                 name="Calculator" 
                 component={CalculatorScreen}
                 options={{
                     tabBarLabel: 'Calculator',
                     tabBarIcon: ({ color, size }) => (
                         <Ionicons name="calculator" size={size} color={color} />
+                    ),
+                    headerShown: true,
+                }}  
+            />
+            <Tab.Screen 
+                name="Feed" 
+                component={FeedScreen}
+                options={{
+                    tabBarLabel: 'Feed',
+                    tabBarIcon: ({ color, size }) => (
+                        <MaterialIcons name="feed" size={size} color={color} />
                     ),
                     headerShown: true,
                 }}  
